@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timeline App</title>
-  <!--<link rel="stylesheet" href="styles.css" />-->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <div class="logo"><b>🕒 My Timeline</b></div>
-    <button id="theme-toggle" aria-label="Switch Theme">Switch Theme</button>
+    <div class="logo"><b>🕒 Growth of Computers Over Time</b></div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
   </header>
-
-  <nav id="filters">
-    <!-- we can add in the upcoming tasks -->
-  </nav>
 
   <main>
     <section id="timeline">
-        <ul>
-            <li onclick="">1990</li>
-            <li onclick="">2000</li>
-            <li onclick="">2005</li>
-            <li onclick="">2015</li>
-        </ul>
-      <!-- Timeline events will be injected here -->
+      <ul></ul>
     </section>
   </main>
 
   <div id="image-placeholder">
-    <img src="images/timeline.png" alt="Decorative timeline banner" />
+    <img src="images/event1.png" alt="Decorative timeline banner">
   </div>
 
-  <div id="modal">
-    <!-- Modal content will appear here in future -->
-  </div>
+  <div id="modal"></div>
 
-  <footer>
-    <small>&copy; 2025 My Timeline. All rights reserved.</small>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
