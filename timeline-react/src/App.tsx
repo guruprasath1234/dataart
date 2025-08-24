@@ -58,7 +58,8 @@
             selected={category}
             onChange={setCategory}
           />
-          <Timeline events={filtered} onSelect={setSelected} />
+          <Timeline  events={filtered}  onSelect={setSelected} selectedEvent={selected}   
+/>
         </main>
         <EventModal event={selected} onClose={() => setSelected(null)} />
         <footer className="footer">© {new Date().getFullYear()} My Timeline</footer>

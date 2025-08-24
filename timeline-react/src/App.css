@@ -1,144 +1,18 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
-  color: #888;
-}
-
-.timeline-container {
-  padding: 20px;
-}
-
-.filter-bar {
-  margin-bottom: 20px;
-}
-
-.filter-select {
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-}
-
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  background-color: #3498db;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-}
-
-.timeline-item {
-  padding: 20px;
-  position: relative;
-  width: 50%;
-}
-
-.timeline-item.left {
-  left: 0;
-}
-
-.timeline-item.right {
-  left: 50%;
-}
-
-.timeline-item .content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  position: relative;
-}
-
-.timeline-item.left .content {
-  margin-right: 30px;
-}
-
-.timeline-item.right .content {
-  margin-left: 30px;
+  color: #555; /* darker gray instead of #888 (contrast ~7:1) */
 }
 
 .year {
   font-weight: bold;
-  color: #3498db;
+  color: #1d6fa5; /* darker blue than #3498db (contrast ~4.6:1) */
   margin-right: 10px;
 }
 
-.title {
-  display: inline-block;
-  margin: 0;
-}
-
-.description {
-  margin: 10px 0;
-  font-size: 14px;
-}
-
-.event-image {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .timeline::after {
-    left: 20px;
-  }
-  .timeline-item {
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 0;
-  }
-  .timeline-item.right {
-    left: 0%;
-  }
-  .timeline-item .content {
-    margin: 0 0 20px 0;
-  }
+.timeline-item .content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #aaa; /* darker border for visibility */
+  position: relative;
 }
