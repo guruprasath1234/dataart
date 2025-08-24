@@ -1,17 +1,63 @@
+import { useEffect, useState } from "react";
 import type { EventData } from "../types";
 
-type Props = {
-  event: EventData;
-  onClick: () => void;
-};
+export default function Timeline() {
+  const [events, setEvents] = useState<EventData[]>([]);
+  const [filter, setFilter] = useState("all");
 
-export default function EventMarker({ event, onClick }: Props) {
+  useEffect(() => {
+    fetch("/data/events.json")
+      .then((res) => res.json())
+      .then((data) => setEvents(data))
+      .catch((err) => console.error("Error loading events:", err));
+  }, []);
+
+  const filteredEvents =
+    filter === "all"
+      ? events
+      : events.filter((event) => event.category === filter);
+
   return (
-    <li className="timeline-item" onClick={onClick} role="button" tabIndex={0}
-        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick()}>
-      <div className="dot" title={`${event.year} • ${event.title}`} />
-      <span className="year">{event.year}</span>
-      <span className="title">{event.title}</span>
-    </li>
+    <div className="timeline-container">
+      {/* Filter Dropdown */}
+      <div className="filter-bar">
+        <label>Category: </label>
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="filter-select"
+        >
+          <option value="all">All</option>
+          {[...new Set(events.map((e) => e.category))].map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Timeline */}
+      <div className="timeline">
+        {filteredEvents.map((event, idx) => (
+          <div
+            key={idx}
+            className={`timeline-item ${idx % 2 === 0 ? "left" : "right"}`}
+          >
+            <div className="content">
+              <div className="event-header">
+                <span className="year">{event.year}</span>
+                <h3 className="title">{event.title}</h3>
+              </div>
+              <p className="description">{event.description}</p>
+              <img
+                src={event.imageURL}
+                alt={event.title}
+                className="event-image"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

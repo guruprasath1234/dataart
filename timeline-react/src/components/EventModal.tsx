@@ -22,9 +22,9 @@ export default function EventModal({ event, onClose }: Props) {
         <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
         <div className="modal-body">
           <h2>{event.title} <small>({event.year})</small></h2>
-          {event.image && (
+          {event.imageURL && (
             <img
-              src={event.image}
+              src={event.imageURL}
               alt={event.title}
               className="modal-image"
               loading="lazy"

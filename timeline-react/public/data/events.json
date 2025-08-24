@@ -3,56 +3,56 @@
     "year": 1990,
     "title": "Project Launch",
     "description": "The project officially kicked off in early 1990 with a small team.",
-    "imageURL": "images/event1.png",
+    "imageURL": "/images/event1.jpg",
     "category": "Launch"
   },
   {
     "year": 1995,
     "title": "First Milestone",
     "description": "We achieved our first major milestone with over 100 clients onboard.",
-    "imageURL": "images/event2",
+    "imageURL": "/images/event2.png",
     "category": "Growth"
   },
   {
     "year": 2000,
     "title": "Going Digital",
     "description": "The organization moved to a fully digital workflow.",
-    "imageURL": "images/event3.jpg",
+    "imageURL": "/images/event3.jpeg",
     "category": "Innovation"
   },
   {
     "year": 2005,
     "title": "International Expansion",
     "description": "We opened offices in three different continents.",
-    "imageURL": "images/event4.jpeg",
+    "imageURL": "/images/event4.jpeg",
     "category": "Expansion"
   },
   {
     "year": 2010,
     "title": "Award Recognition",
     "description": "Received the prestigious Global Excellence Award.",
-    "imageURL": "images/event5.jpeg",
+    "imageURL": "/images/event5.jpeg",
     "category": "Awards"
   },
   {
     "year": 2015,
     "title": "Community Outreach",
     "description": "Launched several CSR programs to give back to the community.",
-    "imageURL": "images/event6.jpg",
+    "imageURL": "/images/event6.jpg",
     "category": "CSR"
   },
   {
     "year": 2020,
     "title": "Remote Transition",
     "description": "Shifted operations to a fully remote environment during the pandemic.",
-    "imageURL": "images/event7.jpeg",
+    "imageURL": "/images/event7.jpeg",
     "category": "Adaptation"
   },
   {
     "year": 2025,
     "title": "AI Integration",
     "description": "Introduced AI tools into daily workflows for better efficiency.",
-    "imageURL": "images/event8.jpeg",
+    "imageURL": "/images/event8.jpeg",
     "category": "Innovation"
   }
 ]

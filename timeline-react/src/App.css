@@ -40,3 +40,105 @@
 .read-the-docs {
   color: #888;
 }
+
+.timeline-container {
+  padding: 20px;
+}
+
+.filter-bar {
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item .content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.timeline-item.left .content {
+  margin-right: 30px;
+}
+
+.timeline-item.right .content {
+  margin-left: 30px;
+}
+
+.year {
+  font-weight: bold;
+  color: #3498db;
+  margin-right: 10px;
+}
+
+.title {
+  display: inline-block;
+  margin: 0;
+}
+
+.description {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.event-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+  .timeline-item.right {
+    left: 0%;
+  }
+  .timeline-item .content {
+    margin: 0 0 20px 0;
+  }
+}
