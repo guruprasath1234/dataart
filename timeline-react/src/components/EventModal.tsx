@@ -9,7 +9,9 @@ export default function EventModal({ event, onClose }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const lastFocused = useRef<HTMLElement | null>(null);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (event && dialogRef.current) {
@@ -20,20 +22,22 @@ export default function EventModal({ event, onClose }: Props) {
     }
   }, [event]);
 
-  // Esc closes (native <dialog> supports onCancel)
   useEffect(() => {
-    const escHandler = (e: KeyboardEvent) => {
+    const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    document.addEventListener("keydown", escHandler);
-    return () => document.removeEventListener("keydown", escHandler);
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
   useEffect(() => {
-    if (!event && lastFocused.current) lastFocused.current.focus();
+    if (!event && lastFocused.current) {
+      lastFocused.current.focus();
+    }
   }, [event]);
 
   if (!mounted || !event) return null;
+
   const root = document.getElementById("modal-root");
   if (!root) return null;
 
@@ -45,7 +49,9 @@ export default function EventModal({ event, onClose }: Props) {
       aria-describedby="modal-desc"
       onCancel={onClose}
     >
-      <button onClick={onClose} aria-label="Close">×</button>
+      <button onClick={onClose} aria-label="Close">
+        ×
+      </button>
       <h2 id="modal-title">
         {event.title} <small>({event.year})</small>
       </h2>

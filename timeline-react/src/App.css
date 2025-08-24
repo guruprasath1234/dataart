@@ -1,11 +1,11 @@
 
 .read-the-docs {
-  color: #555; /* darker gray instead of #888 (contrast ~7:1) */
+  color: #555; 
 }
 
 .year {
   font-weight: bold;
-  color: #1d6fa5; /* darker blue than #3498db (contrast ~4.6:1) */
+  color: #1d6fa5; 
   margin-right: 10px;
 }
 
@@ -13,6 +13,6 @@
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #aaa; /* darker border for visibility */
+  border: 1px solid #aaa; 
   position: relative;
 }

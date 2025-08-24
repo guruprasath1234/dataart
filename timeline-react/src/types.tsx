@@ -1,8 +1,8 @@
 export type EventData = {
-  id: string;          // unique id, or use `${year}-${index}`
+  id: string;         
   year: number;
   title: string;
   description: string;
-  imageURL: string;      // e.g. "/images/foo.jpg"
-  category?: string;   // optional
+  imageURL: string;    
+  category?: string; 
 };

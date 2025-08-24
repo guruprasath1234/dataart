@@ -1,5 +1,5 @@
 type Props = {
-  categories: string[];   // includes "all"
+  categories: string[];  
   selected: string;
   onChange: (c: string) => void;
 };
